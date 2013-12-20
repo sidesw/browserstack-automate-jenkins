@@ -1,0 +1,27 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <!--
+    This jelly script is used for per-project configuration.
+  -->
+  
+  <f:block>
+    <f:section title="BrowserStack Automate Support">
+      <f:entry title="Platform" field="platform"
+        description="The platform or OS you want to run the test on">
+        <f:textbox default="Mac" />
+      </f:entry>
+      <f:entry title="Browser Name" field="browser"
+        description="The name of the browser you want to start">
+        <f:textbox default="chrome" />
+      </f:entry>
+      <f:entry title="Browser Version" field="browserVersion"
+        description="The version number of the browser">
+        <f:textbox default="27.0"/>
+      </f:entry>
+      <f:entry title="Url" field="url"
+        description="(Optional) A starting URL to be provided to the test">
+        <f:textbox />
+      </f:entry>
+    </f:section>
+  </f:block>
+  
+</j:jelly>
